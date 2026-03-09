@@ -1,4 +1,4 @@
-# -Splunk-Persistence-detection-lab
+# Splunk-Persistence-detection-lab
 
 # 🔎 SOC Investigation Lab – Suspicious Scheduled Task Persistence (Splunk)
 
@@ -117,7 +117,7 @@ The results show:
 
 - This confirms the alert corresponds to a single scheduled task creation event.
 
-🖼 Investigation Screenshot
+![query](images/query.png)
 
 # 🔍 Step 2 – Analyze the Task Message Field
 
@@ -143,7 +143,7 @@ Important sections include:
 
 - This behavior is unusual because persistent daily execution is often used by attackers to maintain access.
 
-🖼 Task Trigger Screenshot
+![Trigger](images/Trigger.png)
 
 # 🔍 Step 3 – Analyze the Exec Section
 
@@ -177,7 +177,7 @@ The certutil utility is commonly abused by attackers to:
 
 This strongly suggests malicious persistence.
 
-🖼 Command Execution Screenshot
+![cmd](images/cmd.png)
 
 # 🔍 Step 4 – Identify the Process That Created the Task
 
